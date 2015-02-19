@@ -1,12 +1,7 @@
-ang-starter
+angular-aprendiendo-1
 ===========
 
-Angular start point for medium and large applications.
-
-This project is an starting point for develop an AngularJS application. You can use it for medium and long range applications.
-
-Inside this project live a sample application with an app structure thought for large ammount of code.
-The application itself doesn't do much, just give a boilerplate of configuration files and wire it all together.
+Proyectos para aprender angular partiendo de la estructura que hizo mriverodorta@gmail.com.
 
 Getting Started
 ===========
@@ -15,8 +10,8 @@ I changed the bower components folder to inside the app directory through the .b
 
 ###Clone ang-starter
 ```
-git clone https://github.com/mriverodorta/ang-starter.git
-cd ang-starter
+git clone https://github.com/diegoldiazr/angular-aprendiendo-1.git
+cd angular-aprendiendo-1
 ```
 
 ###Install Dependencies
@@ -70,4 +65,6 @@ bower install
 To serve the application you just need the app directory for production.
 
 ###Contact
-For any question ask me at mriverodorta@gmail.com, or open an issue, be free to fork or use this project for any application you need to develop.
+You can contact with me at diegoldiazr@gmail.com
+
+Thnaks to mriverodorta@gmail.com.
