@@ -21,9 +21,9 @@
     
     <script>
         angular.module('miApp', [])
-        .controller('miCtrl', ['$scope', function (a) {
+        .controller('miCtrl', ['$scope', function ($scope) {
             console.log("pasa por aqui");
-            a.mensaje = 'AngularJS Paso a Paso';
+            $scope.mensaje = 'AngularJS Paso a Paso';
          }]);
     </script>
 </body>
