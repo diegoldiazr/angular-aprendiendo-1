@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Pagina 38.</title>
+    <link rel="stylesheet" href="css/app.css">
+    
+</head>
+<body ng-app="miApp">
+
+    <div class="container" ng-controller="miCtrl">
+        {{ mensaje }}
+        <h1 ng-bind="mensaje">Esto desaparecera</h1>
+    </div>
+
+     
+
+    <!-- Bower components includes -->
+    
+    <script src="bower_components/angular/angular.js"></script>
+    
+    <script>
+        angular.module('miApp', [])
+        .controller('miCtrl', ['$scope', function (a) {
+            console.log("pasa por aqui");
+            a.mensaje = 'AngularJS Paso a Paso';
+         }]);
+    </script>
+</body>
+</html>
