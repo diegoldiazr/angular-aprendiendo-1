@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <h1>Ejemplo con Factory</h1>
-    <div class="container" ng-controller="PlaylistFactoryCtrl">
+    <h1>Ejemplo con Service usando clases</h1>
+    <div class="container" ng-controller="PlaylistServiceCtrl">
         <ul><li ng-repeat="titulo in playlist">{{ titulo }}</li></ul>
     </div>
-    <div ng-controller="PlaylistMetodosFactoryCtrl">
+    <div ng-controller="PlaylistMetodosServiceCtrl">
         <ul>
             <li ng-repeat="titulo in playlist">
                 {{ titulo }}
@@ -27,11 +27,11 @@
 
 
     <!-- Application Services -->
-    <script src="js/Services/PlaylistFactory.js"></script>
+    <script src="js/Services/PlaylistServiceClass.js"></script>
 
     <!-- Application Controllers -->
-    <script src="js/Controllers/PlaylistFactoryCtrl.js"></script>
-    <script src="js/Controllers/PlaylistMetodosFactoryCtrl.js"></script>
+    <script src="js/Controllers/PlaylistServiceCtrl.js"></script>
+    <script src="js/Controllers/PlaylistMetodosServiceCtrl.js"></script>
 
 </body>
 </html>

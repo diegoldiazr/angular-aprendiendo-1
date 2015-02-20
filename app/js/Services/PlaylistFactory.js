@@ -2,7 +2,7 @@
 // al usar factory es singleton.
 // si se usa service se crea una nueva instancia cuando son utilizados
 angular.module('AngStarter')
-.service('PlaylistService', [function(){
+.factory('PlaylistFactory', [function(){
     var playlist = [
         'The miracle',
         'Raised by wolves',
@@ -12,7 +12,12 @@ angular.module('AngStarter')
         'volcano',
         'Iris'
     ];
-    this.listar = function(){return playlist;};
-    this.borrar = function(id){playlist.splice(id,1);};
-    
+   
+    var listar = function(){return playlist;};
+    var borrar = function(id){playlist.splice(id,1);};
+    return{
+        listar: listar,
+        borrar: borrar
+    };
+   
 }])
