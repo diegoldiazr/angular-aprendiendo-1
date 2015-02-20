@@ -18,6 +18,7 @@ angular.module('AngStarter')
         agregar: function(data){
             console.log("agrega las canciones que falta el configurador");
             playlist = playlist.concat(data);
+            
         },
         // $get es requerido por ser un provider
         $get: function(){

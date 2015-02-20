@@ -9,6 +9,6 @@ angular.module('AngStarter')
         'volcano',
         'Iris'    
     ];
-    console.log("para por el config");
+    console.log("pasa por el config");
     PlayalistProvider.agregar(canciones);
 }])
