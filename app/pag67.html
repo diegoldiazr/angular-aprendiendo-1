@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo aplicacion pequeña ddr.</title>
+    
+    <style>
+         .flotar {float: right; padding: 0 10px;}
+         .fondoRojo {background-color: red; }
+         .bordesRedondeados {border: 2px solid black; border-radius: 10px; }
+    </style>
+</head>
+<body ng-app="AngStarter">
+    <h1>Ejemplo Directivas ng-class con expresion en la misma directiva</h1>
+    
+    <input type="checkbox" ng-model="flotar">Flotar
+    <input type="checkbox" ng-model="fondoRojo">Fondo Rojo
+    <input type="checkbox" ng-model="bordesRedondeados">Bordes Redondeados
+    
+    <div ng-class="{'flotar':flotar, 'fondoRojo': fondoRojo, 'bordesRedondeados': bordesRedondeados}">
+        <h1>Ejemplo 1 de los usos de ng-class</h1>
+     </div>
+
+    <!-- Bower components includes -->
+    <script src="bower_components/angular/angular.js"></script>
+    
+    <script type="text/javascript">
+        angular.module('AngStarter', []);
+    </script>
+    
+    
+
+</body>
+</html>

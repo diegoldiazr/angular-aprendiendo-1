@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo aplicacion pequeña ddr.</title>
+    
+    <style>
+         .flotar {float: right; padding: 0 10px;}
+         .fondoRojo {background-color: red; }
+         .bordesRedondeados {border: 2px solid black; border-radius: 10px; }
+    </style>
+</head>
+<body ng-app="AngStarter" ng-Controller="miCtrl">
+    <h1>Ejemplo Directivas ng-class</h1>
+    <div ng-class="generarClases()">
+        <h1>Ejemplo 1 de los usos de ng-class</h1>
+    </div>
+
+    
+    <!-- Bower components includes -->
+    <script src="bower_components/angular/angular.js"></script>
+    
+    <script type="text/javascript">
+        angular.module('AngStarter', [])
+            .controller('miCtrl', ['$scope', function($scope){
+                //var clases = ['flotar', 'fondoRojo', 'borderRedondeados'];
+                var clases = ['flotar', 'fondoRojo borderRedondeados'];
+                $scope.generarClases = function(){
+                    return clases;//.join(' ');
+                }
+            }])
+    </script>
+    
+    
+
+</body>
+</html>
