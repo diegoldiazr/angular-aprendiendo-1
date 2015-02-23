@@ -20,12 +20,21 @@
     <div ng-class="{'flotar':flotar, 'fondoRojo': fondoRojo, 'bordesRedondeados': bordesRedondeados}">
         <h1>Ejemplo 1 de los usos de ng-class</h1>
      </div>
-
+     
+    <div ng-controller="miCtrl">
+        <h1>Ejemplo de directivas np-list</h1>
+        Etiquetas: <input ng-model="etiquetas" ng-list><br>
+        Debug: {{ etiquetas }}
+    </div>
+    
     <!-- Bower components includes -->
     <script src="bower_components/angular/angular.js"></script>
     
     <script type="text/javascript">
-        angular.module('AngStarter', []);
+        angular.module('AngStarter', [])
+        .controller('miCtrl', ['$scope', function($scope) {
+            $scope.etiquetas = ['Actualidad', 'Finanzas', 'Tecnología'];
+        }]);
     </script>
     
     
