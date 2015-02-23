@@ -8,23 +8,19 @@ angular.module('AngStarter')
         /**
          * Configure the Response Interceptor here
          */        
+        console.log("response interceptor");
         
-        var responseInterceptor = function() {
-            var success = function(response) {
+        var interceptor = {
+            response: function(response){
+                response.data.push({
+                    nombre: 'Lorem',
+                    apellidos: 'Ipsum Dolor cargado por intercepcion',
+                    email: 'lorem@example.com',
+                    lenguajes: ['en', 'es']
+                })
                 return response;
-            };
-
-            var error = function(response) {
-                if(response.status === 401) {
-                    $location.path('/unautorized');
-                }
-                return $q.reject(response);
-            };
-
-            return function(promise) {
-                return promise.then(success, error);
-            };
+            }
         };
-
-        return responseInterceptor;
-    }]);
+        
+        return interceptor;
+}]);
