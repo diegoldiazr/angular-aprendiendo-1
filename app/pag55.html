@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AngStarter">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo aplicacion pequeña ddr.</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <h1>Ejemplo con Promesas</h1>
+    <div class="container" ng-controller="PromiseCtrl">
+        <p>Estado del servidro: {{ status }}</p>
+        <p>Estado del servicio HTTP: {{ http }}</p>
+        <p>Estado del servicio de Base de Datos {{ db }}</p>
+        <p>Estado de las conexiones seguras: {{ ssl }}</p>
+    </div>
+
+    
+    <!-- Bower components includes -->
+    <script src="bower_components/angular/angular.js"></script>
+    
+    <!-- Application definition -->
+    <script src="js/app.js"></script>
+    
+    <!-- Application Services -->
+    
+    
+    <!-- Application Decorators -->
+    
+    
+    <!-- Application Configurations -->
+    
+
+    <!-- Application Controllers -->
+    <script src="js/Controllers/PromiseCtrl.js"></script>
+    
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 angular.module('AngStarter')
 .config(['PlaylistProvider', function(PlayalistProvider){
     var canciones = [
-        'every break you take',
+        'every breath you take',
         'imagine by john lennon',
         'yesterday by paul mccartney',
         'volcano',
