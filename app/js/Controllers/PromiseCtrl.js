@@ -1,3 +1,8 @@
+/*
+Esencialmente este es el comportamiento de las promesas en AngularJS. Poner una tarea asíncrona
+a la ejecución de la aplicación y tomar acciones cuando esté lista.
+*/
+
 angular.module('AngStarter')
  .controller('PromiseCtrl', ['$scope', '$q', function ($scope, $q) {
      
@@ -13,7 +18,7 @@ angular.module('AngStarter')
     var checkHTTP = function(){
          var def = $q.defer();
          setTimeout(function(){
-            if ( Math.floor(Math.random()*100) > 50 ) {
+            if ( Math.floor(Math.random()*100) > 40 ) {
                 def.resolve('Online');
             } else {
                 def.reject('El servicio no está disponible');
