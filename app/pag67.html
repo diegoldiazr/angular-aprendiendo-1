@@ -21,12 +21,31 @@
         <h1>Ejemplo 1 de los usos de ng-class</h1>
      </div>
      
+    <hr>
+    
     <div ng-controller="miCtrl">
         <h1>Ejemplo de directivas np-list</h1>
         Etiquetas: <input ng-model="etiquetas" ng-list><br>
         Debug: {{ etiquetas }}
     </div>
     
+    <hr>
+    
+    <div ng-controller="miListaCtrl">
+        <h1>Ejemplo Directivas ng-repeat y ng-class-even</h1>
+        
+        <div class="container">
+            Listado de compra.
+            <input type="search" ng-model="buscar">
+            <ul>
+                <li ng-repeat="compra in musica | filter:buscar" ng-class-even="{'flotar':flotar, 'fondoRojo': fondoRojo, 'bordesRedondeados': bordesRedondeados}">
+                    <strong>Artista:</strong> {{ compra.artista }}
+                    <strong>CD</strong> {{ compra.cd }}
+                </li>
+            </ul>
+         </div>
+    </div>
+
     <!-- Bower components includes -->
     <script src="bower_components/angular/angular.js"></script>
     
@@ -34,7 +53,20 @@
         angular.module('AngStarter', [])
         .controller('miCtrl', ['$scope', function($scope) {
             $scope.etiquetas = ['Actualidad', 'Finanzas', 'Tecnología'];
-        }]);
+        }])
+        .controller('miListaCtrl', ['$scope', function ($scope) {
+            var musica = [
+                {artista: 'U2', cd: 'Songs of Innocence'},
+                {artista: 'Afrojack', cd: 'Forget the World'},
+                {artista: 'Alexandra Stan', cd: 'Unlocked'},
+                {artista: 'Avicii', cd: 'True'},
+                {artista: 'Dash Berlin', cd: 'The New Daylight'},
+                {artista: 'David Guetta', cd: 'Lovers on the Sun'},
+                {artista: 'Echosmith', cd: 'Talking Dreams'},
+                {artista: 'La Roux', cd: ' Trouble in paradise'}
+            ];
+            $scope.musica = musica;
+        }]);;
     </script>
     
     
