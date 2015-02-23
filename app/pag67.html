@@ -39,6 +39,7 @@
             <input type="search" ng-model="buscar">
             <ul>
                 <li ng-repeat="compra in musica | filter:buscar" ng-class-even="{'flotar':flotar, 'fondoRojo': fondoRojo, 'bordesRedondeados': bordesRedondeados}">
+                    <strong>Indice:</strong> {{ $index+1 }}
                     <strong>Artista:</strong> {{ compra.artista }}
                     <strong>CD</strong> {{ compra.cd }}
                 </li>
